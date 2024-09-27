@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             throw new Error("Invalid duration");
         }
 
-        const tutors = [{% for tutor in kolo.tutors.all %}"{{ tutor.username }}"{% if not forloop.last %}, {% endif %}{% endfor %}];
+        const tutors = [{% for tutor in kolo.tutors.all %}"{{ tutor.name }} {{ tutor.surname }} "{% if not forloop.last %}, {% endif %}{% endfor %}];
 
 
         const theme = "{{ kolo.theme|escapejs }}";
